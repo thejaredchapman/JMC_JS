@@ -1,4 +1,4 @@
-# CREATE A FACEBOOK 
+// CREATE A FACEBOOK 
 
 # username info
 {
@@ -7,7 +7,7 @@
 
 }
 
-# username in system
+// username in system
 var database = [
 	{
 		username: "Jared",
@@ -16,7 +16,7 @@ var database = [
 ];
 
 #
-
+// Newsfeed from other users
 var newsfeed = [
 	{
 		username: "Avery",
@@ -31,6 +31,9 @@ var newsfeed = [
 		timeline: "Me and Betsy went for a light jog, lovin' popsicles, yum yum yum!!"
 	}
 ]
+
+// Check username
+
 var userNamePrompt = prompt("What's your username?");
 var passwordPrompt = prompt("What's your password?");
 
