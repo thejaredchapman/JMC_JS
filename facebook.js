@@ -5,7 +5,15 @@
 	username: "Jared",
 	password: "cooldad"
 
-}
+},{username: "Liam",
+	password: "Autobot"
+
+},{
+	username: "Megatron",
+	password: "Optimus"
+
+},
+
 
 // username in system
 var database = [
@@ -34,16 +42,27 @@ var newsfeed = [
 
 // Check username
 
-var userNamePrompt = prompt("What's your username?");
-var passwordPrompt = prompt("What's your password?");
 
-function singIN(user,pass) {
-	if (username  === database[0].username && 
-		password === database[0].password) {
-		console.log(newsFeed);
-	} else {
-		alert("Looks like that's not the right password!")
+function isUserValid(username,password) {
+	for (var i=0; i < database.length; i++){
+		if(database[i].username === username &&
+			database[i].password === password)
+			return true;
+	}
+	return false;
+}
+
+function singIN(username,password) {
+	console.log(isUserValid(username, password));
+	if (isUserValid(username, password)) {
+		console.log(newsfeed)
+	}	else {
+			alert("Look's like that's not the right password")
 	}
 }
+
+var userNamePrompt = prompt("What\'s your username?");
+var passwordPrompt = prompt("What\'s your password?");
+
 
 singIN(userNamePrompt, passwordPrompt);
